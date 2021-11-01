@@ -3,6 +3,9 @@
     <div class="m-8 flex items-center justify-center">
       <Logo />
     </div>
+    <div class="txt-lg">
+      desrcibe me as a developer and how I can add value to Rimsys
+    </div>
     <ul v-if="users.length === 0" class="grid grid-cols-1 gap-6 bg-gray-100 dark:bg-gray-900 rounded p-8 w-full sm:grid-cols-2 lg:grid-cols-3">
       <contact-card-skeleton v-for="i in 9" :key="`skel-${i}`" />
     </ul>

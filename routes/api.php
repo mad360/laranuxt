@@ -20,6 +20,9 @@ Route::get('/', [Controller::class, 'routes'])
     ->withoutMiddleware('api');
 Route::get('/example', [Controller::class, 'example'])->name('example route');
 Route::get('/error', [Controller::class, 'error'])->name('error route');
+//added by matt DiPaolo
+Route::resource('experiences', ExperiencesController::class);
+Route::resource('skills', SkillsController::class);
 
 // Authentication
 Route::get('/login', [Controller::class, 'auth'])->name('login')->name('proper login redirect');

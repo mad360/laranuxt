@@ -27,6 +27,8 @@ Route::resource('skills', SkillController::class);
 Route::resource('experiences', ExperienceController::class);
 Route::delete('skills/{skill}', [SkillController::class, 'destroy']);
 Route::delete('experiences/{experience}', [ExperienceController::class, 'destroy']);
+Route::post('skills/{skill}',[SkillController::class, 'store']);
+Route::post('experiences/{experience}',[ExperienceController::class, 'store']);
 
 // Authentication
 Route::get('/login', [Controller::class, 'auth'])->name('login')->name('proper login redirect');

@@ -42,9 +42,6 @@ class ExperienceController extends Controller
             'description' => 'required',
         ]);
 
-        $num = DB::count('select * from experiences');
-        $num = $num + 1;
-
         Experience::create($request->all());
 
         return redirect()->route('experiences.index')
@@ -89,7 +86,6 @@ class ExperienceController extends Controller
             'description' => 'required',
         ]);
         $experience->update($request->all());
-
 
 
         return redirect()->route('experiences.index')

@@ -1,7 +1,7 @@
 
 <template>
   <li class="w-max col-span-1 bg-white dark:bg-gray-700 rounded-lg shadow">
-    <div class=" container h-full break-normal w-5/6 h-auto flex items-center justify-between p-6 space-x-6">
+    <div class="w-5/6 h-auto flex items-center justify-between p-6 space-x-6">
       <div class="flex-1/2 truncate">
         <div class="flex items-center space-x-3">
           <h3 class="text-gray-900 dark:text-gray-200 text-sm leading-5 font-medium truncate">

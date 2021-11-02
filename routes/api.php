@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +22,10 @@ Route::get('/', [Controller::class, 'routes'])
     ->withoutMiddleware('api');
 Route::get('/example', [Controller::class, 'example'])->name('example route');
 Route::get('/error', [Controller::class, 'error'])->name('error route');
-//added by matt DiPaolo
-Route::resource('experiences', ExperiencesController::class);
-Route::resource('skills', SkillsController::class);
+//added by Matt DiPaolo
+Route::resource('skills', SkillController::class);
+Route::resource('experiences', ExperienceController::class);
+Route::delete('skills', [SkillController::class, 'destroy']);
 
 // Authentication
 Route::get('/login', [Controller::class, 'auth'])->name('login')->name('proper login redirect');

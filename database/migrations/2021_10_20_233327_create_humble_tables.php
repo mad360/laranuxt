@@ -47,8 +47,6 @@ class CreateHumbleTables extends Migration
             $table->primary('token');
         });
 
-
-
     }
 
     /**
@@ -60,7 +58,6 @@ class CreateHumbleTables extends Migration
     {
     Schema::dropIfExists('sessions');
     Schema::dropIfExists('attempts');
-
     }
 
 }

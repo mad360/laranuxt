@@ -1,6 +1,7 @@
 <template>
-  <div class="flex items-center text-4xl">
-    Matthew DiPaolo Rimsys Interview Project
+  <div class="flex items-center">
+    <IconLaravel class="w-16 h-16 -mt-8" primary="text-red-500" />
+    <IconNuxt class="w-16 h-16 -ml-6 mt-8" />
   </div>
 </template>
 

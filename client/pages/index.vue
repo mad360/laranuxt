@@ -4,8 +4,14 @@
       Matthew DiPaolo Interview Project
     </div>
     <div class="m-8 flex items-center justify-center text-lg">
-      Describe me as a developer and what value I can bring to Rimsys - this is
-      in the index file , make it a component so it is modifiable
+      As a developer, I am best described as multifaceted. Computer engineering, my professional experience, and my 
+      personal endeavors have afforded me knowledge in a variety
+      of technologies, ranging from PCB design, embeddeded systems development, high-performance computing in C, data structures
+      and algorithms, object-oriented design in Java and C++, and web development using AWS, Node.js, express.js, and more.
+      I believe it is the holistic view of computer technology that makes me valuable to Rimsys. I am flexible and able to tackle
+      any problem that Rimsys may face. I can help or lead an effort in creating an intuitive user experience, 
+      a robust back-end application, and a reliable server infrastructure. Most importantly, however, I am passionate about 
+      web development and Rimsys' mission to helping businesses bring life-changing technology to market. 
     </div>
     <div class="flex justify-center">
       <ExperiencesColumn />

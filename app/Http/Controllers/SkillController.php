@@ -97,11 +97,6 @@ class SkillController extends Controller
      */
     public function destroy(Skill $skill)
     {
-        echo "here";
-        $skill->delete();
-        echo $skill;
-
-        return redirect()->route('skills.index')
-            ->with('success', 'Skill deleted successfully');
+        DB::delete('delete from skills where id = ?',[$skill['id']]);
     }
 }

@@ -104,9 +104,6 @@ class ExperienceController extends Controller
      */
     public function destroy(Experience $experience)
     {
-        $experience->delete();
-
-        return redirect()->route('experiences.index')
-            ->with('success', 'Experience deleted successfully');
+        DB::delete('delete from experiences where id = ?',[$experience['id']]);
     }
 }

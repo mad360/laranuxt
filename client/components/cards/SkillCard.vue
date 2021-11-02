@@ -15,7 +15,7 @@
         </div>
       </div>
         <ul class="grid grid-cols-1 ">
-            <li><DeleteSkillButton v-on:deleteSkill="deleteSkill(skill.id)"/> </li>
+            <li><DeleteSkillButton v-on:deleteSkill="deleteSkill(skill)"/> </li>
             <li><UpdateSkillButton /> </li>
         </ul>
     </div>
@@ -23,18 +23,16 @@
 </template>
 
 <script setup lang="ts">
-import TopNavbar from "@/layout/TopNavbar.vue";
-import { defineProps, reactive } from "vue";
 const props = defineProps({
   skill: Object,
 });
 const emit = defineEmits(['deleteSkill'])
 const ctx = useContext()
 
-async function deleteSkill (cardId){
+async function deleteSkill (card: any){
   console.log("card - making database delete query")
-  console.log(cardId)
-  //\await ctx.$axios.delete("skills",{data:{id: cardId}})
+  console.log(card.id)
+  await ctx.$axios.delete("skills/" + card.id)
   console.log("card - made delete query")
   emit('deleteSkill')
 }

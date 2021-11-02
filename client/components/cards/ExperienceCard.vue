@@ -15,17 +15,25 @@
         </div>
       </div>
         <ul class="grid grid-cols-1 ">
-            <li><DeleteExperienceButton :id="experience.id"/> </li>
+            <li><DeleteExperienceButton v-on:deleteExperience="deleteExperience(experience)"/> </li>
             <li><UpdateExperienceButton /> </li>
         </ul>
     </div>
   </li>
 </template>
 
-<script lang="ts">
-import { PropType } from '@nuxtjs/composition-api'
-import Vue from 'vue'
-export default Vue.extend({
-  props: ['experience']
-})
+<script setup lang="ts">
+const props = defineProps({
+  experience: Object,
+});
+const emit = defineEmits(['deleteExperience'])
+const ctx = useContext()
+
+async function deleteExperience(card: any){
+  console.log("card - making database delete query")
+  console.log(card.id)
+  await ctx.$axios.delete("experiences/" + card.id)
+  console.log("card - made delete query")
+  emit('deleteExperience')
+}
 </script>

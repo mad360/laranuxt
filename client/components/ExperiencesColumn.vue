@@ -2,7 +2,7 @@
   <div class="container p-2 lg:p-8 flex flex-col">
   <div>Experiences</div>
     <ul class="grid grid-cols-1 gap-6 bg-gray-100 dark:bg-gray-900 rounded p-8 w-full">
-      <experience-card v-for="(experience, index) in experiences" :experience="experience" :key="index"/>
+      <experience-card v-on:deleteExperience="deleteExperience" v-for="(experience, index) in experiences" :experience="experience" :key="index"/>
     </ul>
     <div><AddExperienceButton /></div>
   </div>
@@ -23,6 +23,12 @@ async function get () {
 async function error (): Promise<void> {
   await ctx.$axios.get('/error')
 }
+
+async function deleteExperience(){
+  console.log("column delete experience - calling get()" )
+  get()
+}
+</script>
 </script>
 
 <script lang="ts">export default { auth: false }</script>

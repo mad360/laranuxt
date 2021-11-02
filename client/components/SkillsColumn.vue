@@ -11,7 +11,7 @@
 
 
 <script lang="ts" setup>
-import { getCurrentInstance} from "vue";
+import Vue from 'vue'
 const ctx = useContext()
 const skills = ref([] as models.Skill)
 onMounted(() => get())
@@ -26,8 +26,9 @@ async function error (): Promise<void> {
   await ctx.$axios.get('/error')
 }
 
-function deleteSkill(){
-  console.log("column delete skill" )
+async function deleteSkill(){
+  console.log("column delete skill - calling get()" )
+  get()
 }
 </script>
 

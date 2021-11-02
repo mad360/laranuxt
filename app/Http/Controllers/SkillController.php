@@ -43,7 +43,6 @@ class SkillController extends Controller
         ]);
 
         Skill::create($request->all());
-
         return redirect()->route('skills.index')
             ->with('success', 'Skill created successfully.');
     }

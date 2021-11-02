@@ -1,10 +1,14 @@
 <template>
-  <push-button size="xs">
+  <push-button size="xs" @click="$emit('addSkill')">
     <span
       class="w-1 h-4"
     />
-    Add Skill
+    Add Skill 
   </push-button>
 </template>
-<script lang="ts" setup>
+
+<script >
+  export default {
+    emits: ['addSkill']
+  }
 </script>
